@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static', filename="style.css" )}}>
+    <title>Excuse Generator API</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav" id="nav">
+            <div class="l-nav">
+                <li class="logo">EaaS</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/documentation">Documentation</a></li>
+            </div>
+            <div class="r-nav">
+                <li class="darkMode">Dark</li>
+            </div>
+        </div>
+        <div class="text-content">
+            <p>API Link Sub-paths: </p>
+            <p>1. "/fetch" --> fetches random excuses</p>
+            <p>2. "/fetch/{category}" --> fetches all excuses of a particular category</p>
+            <p>List of available categories right now:
+                <li>a. Work</li>
+                <li>b. College</li>
+                <li>c. Friends</li>
+                <li>d. Relationship</li>
+                <li>e. Life</li>
+            </p>
+            <p>Examples:</p>
+        <li>"home/fetch"</li>
+            <li>"home/fetch/life"</li>    
+        </div>
+        <div class="footer" id="footer">
+            <li><a href="http://">Follow</a></li>
+            <li><a href="http://">Support</a></li>
+            <li><a href="http://">View on GitHub</a></li>
+        </div>
+    </div>
+    <script src={{url_for('static', filename="javascript.js")}}></script>
+</body>
+
+</html>

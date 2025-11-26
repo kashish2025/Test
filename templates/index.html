@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static', filename="style.css" )}}>
+    <title>Excuse Generator API</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav" id="nav">
+            <div class="l-nav">
+                <li class="logo">EaaS</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/documentation">Documentation</a></li>
+            </div>
+            <div class="r-nav">
+                <li class="darkMode">Dark</li>
+            </div>
+        </div>
+        <div class="content">
+            <div class="text-content">
+                <div class="intro">
+                    <h1>Found Your Excuses For Today?</h1>
+                    <p>Excuses as a Service (EaaS). Because sometimes... the truth needs better storytelling.</p>
+                </div>
+                <div class="usage">
+                    <p>Read our <a href="">documentation</a> to find out more or try it out below yourself.</p>
+                    <p>Want to contribute? Submit your own best excuse for being late by creating a <a href="">pull request here.</a></p>
+                </div>
+                <div class="demo">
+                    <div class="quote">JSON:</div>
+                    <pre><code>
+{
+  "excuse": "The lift stopped at every floor like it was collecting Pokémons.",
+  "status": "success"
+}
+                                            </code></pre>
+                    <div class="examples">Fetch randome excuse DEMO</div>
+                    <button class="fetch-rand"><a href="/fetch">Fetch</a></button>
+                    <div class="fetch-cat">
+                        <div class="examples">Fetch category (work) of excuses DEMO</div>
+                        <button class="fetch-cat"><a href="/fetch/work">Fetch</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="display-pic">
+                    <img src={{ url_for('static', filename="img.png") }} alt="Homer Simpson Eating A Donut Png - Homer Simpson@nicepng.com">
+
+            </div>
+        </div>
+        <div class="footer" id="footer">
+            <li><a href="http://">Follow</a></li>
+            <li><a href="http://">Support</a></li>
+            <li><a href="http://">View on GitHub</a></li>
+        </div>
+    </div>
+    <script src={{url_for('static', filename="javascript.js")}}></script>
+</body>
+
+</html>

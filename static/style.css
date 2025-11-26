@@ -1,0 +1,185 @@
+:root {
+  --primaryColor: white;
+  --textColor: black;
+  --marginDef: 0;
+  --paddingDef: 0;
+  --fontWeight: 200;
+  --smallDevice: 576px;
+  --tabletDevice: 768px;
+  --laptopDevice: 992px;
+  --largeDevice: 1200px;
+  --bgBlack: #3a4664;
+  --bgWhite: #ffffff;
+  --bgGrey: #aaaaaa;
+  --btnColor: #3399ff;
+}
+
+/* To whole document */
+body, html {
+  margin: var(--marginDef);
+  padding: var(--paddingDef);
+  background-color: var(--primaryColor);
+}
+
+
+/* navigation bar  */
+
+
+/* navigation bar structure and putting elements on left and right*/
+.nav {
+  display: flex;
+  background-color: var(--bgWhite);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: var(--fontWeight);
+  font-size: medium;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* for responsiveness */
+@media screen and (max-width: 576px) {
+  .nav {
+    flex-direction: column;
+  }
+}
+
+/* making left nav section orientation row */
+.l-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .l-nav {
+    flex-direction: column;
+  }
+
+  .nav li {
+    padding: 1rem;
+  }
+}
+
+/* padding and spacing */
+.nav li {
+  padding: 1.2rem;
+}
+
+
+/* logo  */
+.nav .logo {
+  font-weight: 1000;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+}
+
+/* shadow  */
+.nav {
+  filter: drop-shadow(0px 0.1px 10px rgba(0,0,0,0.3));
+}
+
+/* navigation over  */
+
+
+
+/* footer start  */
+
+
+/* replication navigation */
+.footer {
+  display: flex;
+  background-color: var(--bgBlack);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: var(--fontWeight);
+  font-size: medium;
+  list-style: none;
+  justify-content: space-around;
+  height: 150px;
+  align-items: center;
+  margin-top: 1rem;
+  color: var(--bgWhite);
+}
+
+/* for responsiveness */
+@media screen and (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footer li {
+  padding: 1rem;
+  }
+
+}
+
+/* button style    */
+
+button {
+  background-color: var(--btnColor);
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  color: var(--bgWhite);
+  border-width: 0.2px;
+  border-color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #3c9eff;
+}
+
+/* making the txt fit smaller screens */
+
+p, h1, code {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+.text-content {
+  text-align: center;
+  margin: 0px 10px;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+code {
+  background-color: var(--bgBlack);
+  border-radius: 5px;
+  padding: 1rem;
+  color: white;
+  margin: 1rem auto;
+  display: block;
+  max-width: var(--tabletDevice);
+}
+
+.display-pic {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.display-pic img {
+  height: 20em;
+}
+
+.nav a, .footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-content a {
+  color: blueviolet;
+  font-weight: 500;
+}
+
+.text-content button a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
